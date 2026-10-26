@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  --color-brand-gold: #D4AF37;
+  --color-brand-gold-hover: #C59F2D;
+  --color-brand-gold-light: #F2CA50;
+  --color-brand-gold-muted: #A38423;
+  --color-brand-dark: #0A0A0C;
+  --color-brand-surface: #111215;
+  --color-brand-surfaceLight: #181A1F;
+  --color-brand-card: #131418;
+  --color-brand-border: rgba(212, 175, 55, 0.22);
+  --color-brand-border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+.glass-obsidian {
+  background: rgba(10, 10, 12, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.hero-gradient {
+  background: linear-gradient(180deg, rgba(10, 10, 12, 0.5) 0%, rgba(10, 10, 12, 0.85) 65%, #0A0A0C 100%);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.18);
+}
+
+/* ── Hero premium animations ── */
+@keyframes kenBurns {
+  0% {
+    transform: scale(1) translateX(0%) translateY(0%);
+  }
+
+  100% {
+    transform: scale(1.12) translateX(-2%) translateY(-1%);
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatDot {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(-18px) scale(1.5);
+    opacity: 0.9;
+  }
+}
+
+@keyframes shimmerGold {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Utility class for shimmer text */
+.text-shimmer {
+  background: linear-gradient(90deg, #D4AF37 0%, #F2CA50 40%, #D4AF37 60%, #A38423 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerGold 4s linear infinite;
+}
+
+/* ── Global scale: restore the original (slightly zoomed-out) layout ── */
+@media (min-width: 641px) {
+  .site-zoom {
+    zoom: 0.9;
+  }
+
+  /* Keep the full-bleed hero filling the viewport despite the 10% zoom-out */
+  .site-zoom .home-hero {
+    min-height: 111vh;
+  }
+}
