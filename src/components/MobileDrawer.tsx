@@ -50,6 +50,9 @@ export default function MobileDrawer({ isOpen, onClose, activePage = "home" }: M
             <img
               src="/logo.jpg"
               alt="KRSK"
+              width={32}
+              height={32}
+              style={{ maxWidth: '32px', maxHeight: '32px' }}
               className="h-8 w-8 object-contain rounded-md"
             />
             <div className="flex flex-col">

@@ -28,12 +28,12 @@ export default function Home() {
       <section id="home" className="home-hero relative min-h-[100vh] flex items-center justify-center pt-4 pb-20 lg:pt-20 lg:pb-20">
 
         {/* Ken-Burns background */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 z-0 overflow-hidden" style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
           <img
             src="/hero-security.jpg"
             alt="Professional KRSK Security Officer outside a London building"
             className="absolute inset-0 w-full h-full object-cover object-center"
-            style={{ animation: 'kenBurns 20s ease-in-out infinite alternate' }}
+            style={{ animation: 'kenBurns 20s ease-in-out infinite alternate', position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-[#0A0A0C]/60 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0C]/50 via-transparent to-[#0A0A0C]/30" />
@@ -593,7 +593,7 @@ export default function Home() {
 
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/logo.jpg" alt="KRSK Security Services logo" className="h-10 w-10 object-contain rounded-md" />
+              <img src="/logo.jpg" alt="KRSK Security Services logo" width={40} height={40} style={{ maxWidth: '40px', maxHeight: '40px' }} className="h-10 w-10 object-contain rounded-md" />
               <div>
                 <div className="font-serif text-base tracking-[0.12em] font-semibold text-brand-text uppercase">KRSK</div>
                 <div className="text-[8px] uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">Security Services</div>

@@ -59,6 +59,9 @@ export default function Navbar() {
             <img
               src="/logo.jpg"
               alt="KRSK Security Services Insignia"
+              width={48}
+              height={48}
+              style={{ maxWidth: '48px', maxHeight: '48px' }}
               className="h-12 w-12 object-contain drop-shadow-[0_2px_12px_rgba(212,175,55,0.3)] transition duration-200 group-hover:scale-105 rounded-lg"
             />
             <div className="flex flex-col">

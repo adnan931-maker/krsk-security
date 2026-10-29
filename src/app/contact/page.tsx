@@ -406,7 +406,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
           <div className="col-span-2 md:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/logo.jpg" alt="KRSK Security Services" className="h-9 w-9 object-contain rounded-md" />
+              <img src="/logo.jpg" alt="KRSK Security Services" width={36} height={36} style={{ maxWidth: '36px', maxHeight: '36px' }} className="h-9 w-9 object-contain rounded-md" />
               <div>
                 <div className="font-serif text-sm tracking-[0.12em] font-semibold text-white uppercase">KRSK</div>
                 <div className="text-[7px] uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">Security Services</div>
